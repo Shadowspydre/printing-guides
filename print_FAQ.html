@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print File Preparation Guide — The UPS Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="ups-header">
+        <img src="src/logo.png" alt="The UPS Store logo" class="ups-logo">
+    </header>
+
+    <main class="ups-page-container">
+        <h1 class="ups-title">Print File Preparation Guide</h1>
+        <p class="ups-intro">A quick reference for preparing your files for print. Follow these guidelines to ensure your prints<br> come out crisp, vibrant, and exactly as you envisioned.</p>
+
+        <!-- 1. BLEED -->
+        <h2 class="ups-section-title">Bleed &amp; Cut Lines</h2>
+        <div class="ups-grid-split">
+            <div class="ups-text-column">
+                <p class="ups-text-p">Paper shifts up to &frac18;&quot; during cutting.</p>
+                <ul class="ups-legend-list">
+                    <li class="ups-legend-item">
+                        <span class="ups-color-indicator ups-ind-bleed" aria-hidden="true"></span>
+                        <span><strong>Bleed:</strong> Stretch backgrounds to this edge.</span>
+                    </li>
+                    <li class="ups-legend-item">
+                        <span class="ups-color-indicator ups-ind-cut" aria-hidden="true"></span>
+                        <span><strong>Cut/Trim Edge:</strong> Where the blade trims the sheet.</span>
+                    </li>
+                    <li class="ups-legend-item">
+                        <span class="ups-color-indicator ups-ind-safe" aria-hidden="true"></span>
+                        <span><strong>Safe Zone:</strong> Keep critical content inside, ideally &frac18;&quot; from the cut line.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="ups-graphic-column">
+                <div class="ups-bleed-zone" aria-hidden="true">
+                    <div class="ups-cut-zone">
+                        <div class="ups-safe-zone">
+                            <span class="ups-inner-text">Keep Text Inside</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="ups-zone-legend" aria-hidden="true">
+                    <span class="ups-micro-tag ups-tag-red">&#9632; Bleed Edge</span>
+                    <span class="ups-micro-tag ups-tag-black">&ndash; &ndash; Cut Line</span>
+                    <span class="ups-micro-tag ups-tag-green">&middot; &middot; Safe Zone</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. IMAGE QUALITY -->
+        <h2 class="ups-section-title">Image Quality (Resolution)</h2>
+        <div class="ups-grid-split ups-grid-split--quality">
+            <div class="ups-text-column">
+                <p class="ups-text-p">Commercial digital printing presses require crisp, dense data to achieve sharp results. While low-quality files might look perfect on your smartphone or monitor, physical ink behaves differently and will expose blurry artifacts.</p>
+                <ul class="ups-q-list">
+                    <li class="ups-q-item">
+                        <strong>Vectors (PDF/AI) or high-resolution images (300 dpi):</strong> Produce a crisp, clear output, especially with text.
+                    </li>
+                    <li class="ups-q-item">
+                        <strong>Screenshots and many web images:</strong> Low-resolution DPI files print blurry or pixelated. Export as JPG/TIF/PNG at 300 dpi.
+                    </li>
+                </ul>
+            </div>
+            <div class="ups-q-graph-col">
+                <div class="ups-compare-wrapper ups-compare-wrapper--gecko">
+                    <div class="ups-card">
+                        <div class="ups-card-graphic ups-g-sharp">
+                            <img src="src/gecko_high.jpg" alt="Sharp, print-ready image example" class="ups-card-img">
+                        </div>
+                        <span class="ups-card-status ups-status-pass">&#10004; Print-Ready</span>
+                        <span class="ups-card-desc">Sharp images, lines &amp; crisp text</span>
+                    </div>
+                    <div class="ups-card">
+                        <div class="ups-card-graphic ups-g-pixelated">
+                            <img src="src/gecko_low_res.jpg" alt="Blurry, low-resolution image example" class="ups-card-img">
+                        </div>
+                        <span class="ups-card-status ups-status-fail">&#10006; Too Low</span>
+                        <span class="ups-card-desc">Blurry/pixelated output when printed (most web images)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. COLOR -->
+        <h2 class="ups-section-title ups-tit_no_caps">CMYK vs RGB</h2>
+        <div class="ups-grid-split">
+            <div class="ups-text-column">
+                <p class="ups-text-p">Screens use light (RGB) while presses use ink (CMYK). RGB can be used, but colors <u>may shift</u> when printed. If color is critical, request a printed proof sample.</p>
+                <ul class="ups-c-list">
+                    <li class="ups-c-item">
+                        <strong>CMYK:</strong> Standard four-color physical press mix. Also used for our digital printer.
+                    </li>
+                    <li class="ups-c-item">
+                        <strong>RGB:</strong> Screen colors may shift when printed. Default for most digital files, incl. Canva free tier.
+                    </li>
+                </ul>
+            </div>
+            <div class="ups-c-graph-col">
+                <div class="ups-compare-wrapper">
+                    <div class="ups-c-card">
+                        <div class="ups-swatch ups-swatch-cmyk" aria-hidden="true">INK</div>
+                        <span class="ups-c-card-title">CMYK</span>
+                        <span class="ups-c-card-desc">Recommended for print.<br>If possible, convert files to CMYK.</span>
+                    </div>
+                    <div class="ups-c-card">
+                        <div class="ups-swatch ups-swatch-rgb" aria-hidden="true">LIGHT</div>
+                        <span class="ups-c-card-title">RGB</span>
+                        <span class="ups-c-card-desc">Colors may shift<br>when printed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- APPLE WARNING -->
+        <div class="ups-warning-box" role="note">
+            <h3><span aria-hidden="true">&#9888;&#65039;</span> macOS files are not supported (.pages, .numbers, .key, .HEIC)</h3>
+            <p>Many macOS and HEIC files from iOS are not supported.</p>
+            <p class="ups-warning-note">Please use <span class="ups-ui-badge">File</span> &rarr; <span class="ups-ui-badge">Export To</span> &rarr; <span class="ups-ui-badge">PDF</span> inside your native Apple app, or convert at <a href="https://cloudconvert.com" target="_blank" rel="noopener noreferrer">CloudConvert.com</a>.</p>
+        </div>
+
+
+        <h2 class="ups-section-title ups-tit_no_caps">Ready to send your file(s)? Make sure you've checked everything!</h2>
+        <!-- CHECKLIST -->
+        <div class="ups-checklist-box">
+            <h3><span aria-hidden="true">&#x2705;</span> Pre-Flight Checklist</h3>
+            <ul class="ups-checklist-list">
+                <li class="ups-checklist-item">
+                    <span class="ups-check-icon" aria-hidden="true">&#9744;</span>
+                    Background extends to bleed line (1/8&quot; ideal).
+                </li>
+                <li class="ups-checklist-item">
+                    <span class="ups-check-icon" aria-hidden="true">&#9744;</span>
+                    Text is inside safe zone.
+                </li>
+                <li class="ups-checklist-item">
+                    <span class="ups-check-icon" aria-hidden="true">&#9744;</span>
+                    Output file is a PDF/AI/EPS or high-resolution raster image (JPG, TIF, PNG @ 300dpi).
+                </li>
+            </ul>
+        </div>
+
+        <!-- ACCORDIONS / FAQ -->
+        <h2 class="ups-section-title">Software Guides &amp; FAQ</h2>
+        <div class="ups-ac">
+
+            <div class="ups-ai">
+                <button type="button" class="ups-at" id="accordion-btn-canva" aria-expanded="false" aria-controls="accordion-panel-canva">
+                    <span><span class="ups-ib" aria-hidden="true">&#9632;</span> Canva Export Guide</span>
+                    <span class="arrow-box" aria-hidden="true">&#9660;</span>
+                </button>
+                <div class="ups-ax" id="accordion-panel-canva" role="region" aria-labelledby="accordion-btn-canva" hidden>
+                    <ol>
+                        <li>Go to <span class="ups-bg">File</span> &rarr; <span class="ups-bg">View settings</span> &rarr; Check <strong>Bleed</strong>.</li>
+                        <li>Click <span class="ups-bg">Share</span> &rarr; <span class="ups-bg">Download</span>.</li>
+                        <li>Set to <strong>PDF Print</strong> and check <strong>Crop marks and bleed</strong>.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="ups-ai">
+                <button type="button" class="ups-at" id="accordion-btn-photoshop" aria-expanded="false" aria-controls="accordion-panel-photoshop">
+                    <span><span class="ups-ib" aria-hidden="true">&#9632;</span> Photoshop Guide</span>
+                    <span class="arrow-box" aria-hidden="true">&#9660;</span>
+                </button>
+                <div class="ups-ax" id="accordion-panel-photoshop" role="region" aria-labelledby="accordion-btn-photoshop" hidden>
+                    <ol>
+                        <li><strong>Setup:</strong> Add <span class="ups-bg">0.25 inches total</span> to canvas width and height for bleed (e.g. 3.5&quot;&times;2&quot; card becomes <strong>3.75&quot;&times;2.25&quot;</strong>).</li>
+                        <li><strong>DPI:</strong> Set resolution field to <strong>300 Pixels/Inch</strong>.</li>
+                        <li><strong>Color:</strong> Change dropdown from RGB Color to <strong>CMYK Color / 8-bit</strong>.</li>
+                        <li><strong>Exporting:</strong> Go to <span class="ups-bg">File</span> &rarr; <span class="ups-bg">Save a Copy&hellip;</span></li>
+                        <li><strong>Format:</strong> Select <strong>&quot;Photoshop PDF&quot;</strong> from the drop-down menu.</li>
+                        <li><strong>Preset:</strong> Choose <strong>&quot;[Press Quality]&quot;</strong> from the top menu, and click Save PDF.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="ups-ai">
+                <button type="button" class="ups-at" id="accordion-btn-turnaround" aria-expanded="false" aria-controls="accordion-panel-turnaround">
+                    <span><span class="ups-ib" aria-hidden="true">&#9632;</span> When does turnaround start?</span>
+                    <span class="arrow-box" aria-hidden="true">&#9660;</span>
+                </button>
+                <div class="ups-ax" id="accordion-panel-turnaround" role="region" aria-labelledby="accordion-btn-turnaround" hidden>
+                    <p>Production begins only after your print-ready file and payment are confirmed.</p>
+                </div>
+            </div>
+
+            <div class="ups-ai">
+                <button type="button" class="ups-at" id="accordion-btn-proofread" aria-expanded="false" aria-controls="accordion-panel-proofread">
+                    <span><span class="ups-ib" aria-hidden="true">&#9632;</span> Will you check my files for spelling or design typos before printing?</span>
+                    <span class="arrow-box" aria-hidden="true">&#9660;</span>
+                </button>
+                <div class="ups-ax" id="accordion-panel-proofread" role="region" aria-labelledby="accordion-btn-proofread" hidden>
+                    <p>No. Our prepress review checks exclusively for technical mechanical constraints (resolution density, bleed extensions, and file formats). We do not proofread text, catch spelling errors, or review design aesthetics. Please triple-check your copy completely before uploading your artwork!</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+    (function () {
+        function setPanelState(item, isOpen) {
+            var btn = item.querySelector('.ups-at');
+            var panel = item.querySelector('.ups-ax');
+            item.classList.toggle('active', isOpen);
+            btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            panel.hidden = !isOpen;
+        }
+
+        function toggleAccordion(btn) {
+            var currentItem = btn.closest('.ups-ai');
+            var isOpening = !currentItem.classList.contains('active');
+
+            document.querySelectorAll('.ups-ai').forEach(function (item) {
+                setPanelState(item, item === currentItem && isOpening);
+            });
+        }
+
+        document.querySelectorAll('.ups-at').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                toggleAccordion(btn);
+            });
+            btn.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleAccordion(btn);
+                }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
