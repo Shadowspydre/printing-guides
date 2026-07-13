@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print File Preparation Guide — The UPS Store</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    /* Overrides: widen boxed list items and slightly larger text on wider screens */
+    @media (min-width: 900px) {
+        .ups-legend-item,
+        .ups-q-item,
+        .ups-c-item {
+            min-width: 520px;
+            font-size: 1rem;
+        }
+        .ups-legend-item > span:last-child,
+        .ups-q-item > span,
+        .ups-c-item > span {
+            flex: 1 1 auto;
+        }
+    }
+    </style>
 </head>
 <body>
 
@@ -32,7 +48,7 @@
                     </li>
                     <li class="ups-legend-item">
                         <span class="ups-color-indicator ups-ind-safe" aria-hidden="true"></span>
-                        <span><strong>Safe Zone:</strong> Keep critical content inside, ideally &frac18;&quot; from the cut line.</span>
+                        <span><strong>Safe Zone:</strong> Keep critical content inside, ideally &frac18;&quot; from the cut&nbsp;line.</span>
                     </li>
                 </ul>
             </div>
