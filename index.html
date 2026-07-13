@@ -203,16 +203,34 @@
             </div>
 
         </div>
+
+        <footer class="ups-footer" role="contentinfo">
+            <div>
+            <h4>Need help with a specific file type or print setup? Contact us for support. Visit our <a href="https://locations.theupsstore.com/nc/wilmington/310-n-front-st" target="_blank" rel="noopener noreferrer">official store page.</a></h4>
+            <p>The UPS Store® locations are independently owned and operated by franchisees of The UPS Store, Inc. (although one or more may be company-owned) in the USA and by its master licensee and its franchisees in Canada. 
+                All employees working at The UPS Store franchised centers, including the notary, are employees of the franchisee and the franchisee alone and are not The UPS Store, Inc. employees. Products, services, pricing and hours of operation may vary by location.</p>
+        </footer>
     </main>
 
     <script>
     (function () {
+        var transitionDuration = 600;
+
         function setPanelState(item, isOpen) {
             var btn = item.querySelector('.ups-at');
             var panel = item.querySelector('.ups-ax');
             item.classList.toggle('active', isOpen);
             btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            panel.hidden = !isOpen;
+
+            if (isOpen) {
+                panel.hidden = false;
+            } else {
+                window.setTimeout(function () {
+                    if (!item.classList.contains('active')) {
+                        panel.hidden = true;
+                    }
+                }, transitionDuration);
+            }
         }
 
         function toggleAccordion(btn) {

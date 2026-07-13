@@ -154,16 +154,16 @@ body {
 .ups-bleed-zone {
     border: 2px solid #ef4444;
     background: #fff5f5;
-    padding: 20px;
-    width: 100%;
-    max-width: 280px;
+    padding: 24px;
+    width: min(100%, 420px);
+    max-width: 420px;
     text-align: center;
 }
 
 .ups-cut-zone {
     border: 2px dashed #000;
     background: #fff;
-    padding: 20px;
+    padding: 24px;
 }
 
 .ups-safe-zone {
@@ -503,7 +503,7 @@ body {
     font-size: 0.8rem;
     font-weight: bold;
     flex-shrink: 0;
-    transition: transform 0.25s ease, background 0.2s ease;
+    transition: transform 0.28s ease, background 0.28s ease;
 }
 
 .ups-ai.active .arrow-box {
@@ -520,7 +520,7 @@ body {
     color: #374151;
     font-size: 1rem;
     line-height: 1.65;
-    transition: max-height 0.35s ease, opacity 0.35s ease, padding 0.35s ease;
+    transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.6s ease;
 }
 
 .ups-ai.active .ups-ax {
@@ -563,6 +563,19 @@ body {
     font-weight: bold;
 }
 
+.ups-footer {
+    margin: 40px 0 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--ups-border);
+    text-align: center;
+}
+
+.ups-footer p {
+    margin: 0;
+    font-size: 0.6rem;
+    color: var(--ups-text-muted);
+}
+
 /* RESPONSIVE */
 @media (max-width: 640px) {
     .ups-logo {
@@ -580,6 +593,11 @@ body {
 
     .ups-graphic-column {
         padding: 20px 16px;
+    }
+
+    .ups-bleed-zone {
+        max-width: 100%;
+        padding: 18px;
     }
 
     .ups-compare-wrapper {
